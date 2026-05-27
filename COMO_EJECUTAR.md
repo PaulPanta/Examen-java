@@ -1,11 +1,23 @@
 # Como ejecutar el proyecto
 
-## Requisitos
+## Opcion rapida en Windows (sin Node/npm instalados)
+
+- Ejecuta doble clic en `run.bat` desde la raiz del proyecto.
+- El script hace esto automaticamente:
+  - descarga Node portable si no existe Node/npm en el sistema
+  - instala dependencias de `backend/` y `frontend/`
+  - levanta backend en `3000` y frontend en `4200`
+
+Requiere internet en la primera ejecucion.
+
+## Opcion manual
+
+### Requisitos
 
 - Node.js 18+ (recomendado 20+)
 - npm 9+
 
-## 1) Backend (Express)
+### 1) Backend (Express)
 
 Desde la raiz del repo:
 
@@ -15,14 +27,14 @@ npm install
 npm start
 ```
 
-Backend disponible en:
+Backend:
 
 - `http://localhost:3000`
 - API: `http://localhost:3000/api/productos`
 
-## 2) Frontend (Angular)
+### 2) Frontend (Angular)
 
-En otra terminal, desde la raiz del repo:
+En otra terminal:
 
 ```bash
 cd frontend
@@ -30,31 +42,13 @@ npm install
 npm start
 ```
 
-Frontend disponible en:
+Frontend:
 
 - `http://localhost:4200`
 
-## 3) Flujo esperado
+## Flujo funcional esperado
 
-- Abrir `http://localhost:4200`
-- Ver lista de productos
-- Crear producto
-- Editar producto
-- Eliminar producto
-
-Todo se consume desde el backend en `http://localhost:3000/api/productos`.
-
-## 4) Verificacion rapida (opcional)
-
-Probar backend con curl:
-
-```bash
-curl http://localhost:3000/api/productos
-```
-
-Build frontend:
-
-```bash
-cd frontend
-npm run build
-```
+- listar productos
+- crear producto
+- editar producto
+- eliminar producto
